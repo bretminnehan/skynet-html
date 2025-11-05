@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYNETACRES - Home</title>
+    <style>
+        /* --- Basic Setup --- */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif; /* A fallback font */
+            overflow: hidden; /* Prevents scrollbars from the background */
+        }
+
+        body {
+            /* This is the key: uses your full image as the background */
+            background-image: url('Gemini_Generated_Image_tn4jghtn4jghtn4j.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Keeps the background stationary */
+        }
+
+        /* --- Navigation Bar --- */
+        /* This layer sits on top of your background image's nav */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            width: 100%;
+            box-sizing: border-box; /* Ensures padding doesn't add to width */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        nav .nav-links, nav .user-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav .nav-links li, nav .user-links li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #eee;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e63946; /* Uses the red from your text */
+        }
+
+        /* --- Glowing Eyes Animation --- */
+        
+        /* This animation creates the pulsing glow */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.7);
+                opacity: 1;
+            }
+            50% {
+                box-shadow: 0 0 20px 10px rgba(255, 0, 0, 1);
+                opacity: 0.8;
+            }
+            100% {
+                box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.7);
+                opacity: 1;
+            }
+        }
+
+        .eye-glow {
+            /* This creates the red circle */
+            background-color: #f00;
+            border-radius: 50%;
+            
+            /* This applies the animation */
+            animation: pulse 1.5s infinite alternate;
+            
+            /* This is the part you MUST adjust */
+            position: absolute;
+        }
+
+        /* * !!! IMPORTANT !!!
+         * You will need to manually adjust the 'top' and 'left' values 
+         * below until they line up perfectly with the eyes on your 
+         * background image. Percentages are tricky, so you might
+         * need to experiment.
+        */
+
+        .left-eye {
+            /* My best guess at coordinates. Adjust these! */
+            top: 40.5%; 
+            left: 49.2%;
+            width: 12px;
+            height: 12px;
+        }
+
+        .right-eye {
+            /* My best guess at coordinates. Adjust these! */
+            top: 40.5%;
+            left: 50.8%;
+            width: 12px;
+            height: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="eye-glow left-eye"></div>
+    <div class="eye-glow right-eye"></div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="user-links">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+    </nav>
+
+    </body>
+</html>
